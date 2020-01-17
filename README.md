@@ -19,6 +19,16 @@ in other words it is still in the finishing stage.
 * Upcomming Event List
 * Detail Event
 
+# Tools
+## Front-end: 
+- React Native
+- NativeBase
+- Axios
+ 
+## Back-end: 
+- Node.js
+- Express
+
 ## Contact
 * WA/TELEGRAM: +62 857 3580 0182
 * email: mohkarnoto@gmail.com
