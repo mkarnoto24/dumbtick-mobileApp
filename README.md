@@ -7,9 +7,9 @@ in other words it is still in the finishing stage.
 ## Picture App
 <p float="center">
   <img src="https://github.com/noto90/dumbtick-mobileApp/blob/master/src/screenshoot/1.png" width="200" height="350" alt="Home"/>
-  <img src="https://github.com/radifanmp/Kedai-Santuy/blob/master/src/screenshoot/2.png" width="200" height="350" alt="all-event"/>
-  <img src="https://github.com/radifanmp/Kedai-Santuy/blob/master/src/screenshoot/3.png" width="200" height="350" alt="category-page"/>
-  <img src="https://github.com/radifanmp/Kedai-Santuy/blob/master/src/screenshoot/4.png" width="200" height="350" alt="detail-event"/>
+  <img src="https://github.com/noto90/dumbtick-mobileApp/blob/master/src/screenshoot/2.png" width="200" height="350" alt="all-event"/>
+  <img src="https://github.com/noto90/dumbtick-mobileApp/blob/master/src/screenshoot/3.png" width="200" height="350" alt="category-page"/>
+  <img src="https://github.com/noto90/dumbtick-mobileApp/blob/master/src/screenshoot/4.png" width="200" height="350" alt="detail-event"/>
 </p>
 
 ## Fitur 
