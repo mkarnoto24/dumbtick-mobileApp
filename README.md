@@ -6,10 +6,12 @@ in other words it is still in the finishing stage.
 
 ## Picture App
 <p float="center">
-  <img src="https://user-images.githubusercontent.com/10962715/72587907-40185400-3929-11ea-9b49-75e87d584f03.png" width="200" height="350" alt="Home"/>
-  <img src="https://user-images.githubusercontent.com/10962715/72587908-40185400-3929-11ea-93d3-cc3246f67920.png" width="200" height="350" alt="today-event"/>
-  <img src="https://user-images.githubusercontent.com/10962715/72587909-40185400-3929-11ea-9342-e2a1e75bfbd8.png" width="200" height="350" alt="all-event"/>
-  <img src="https://user-images.githubusercontent.com/10962715/72587910-40b0ea80-3929-11ea-89a2-aa8f1625a618.png" width="200" height="350" alt="detail-event"/>
+  <img src="https://user-images.githubusercontent.com/10962715/72588498-18c28680-392b-11ea-97e0-0a426ced6dd9.jpg" width="200" height="350" alt="Home"/>
+  <img src="https://user-images.githubusercontent.com/10962715/72588494-1829f000-392b-11ea-8575-25365aab12f2.jpg" width="200" height="350" alt="all-event"/>
+  <img src="event-by-category](https://user-images.githubusercontent.com/10962715/72588495-18c28680-392b-11ea-9448-d3b23b62cb39.jpg"  width="200" height="350" alt="today-event"/>
+  <img src="https://user-images.githubusercontent.com/10962715/72588496-18c28680-392b-11ea-8694-cc33fb4af638.jpg" width="200" height="350" alt="detail-event"/>
+ 
+
 </p>
 
 ## Fitur 
