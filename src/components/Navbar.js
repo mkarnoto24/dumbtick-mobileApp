@@ -15,17 +15,17 @@ class Navbar extends Component {
         return (
             <Header androidStatusBarColor="#fa163f" style={styles.navbar}>
                 <Left>
-                    <Button transparent>
+                    {/* <Button transparent>
                         <Icon name='menu' />
-                    </Button>
+                    </Button> */}
                 </Left>
                 <Body>
                     <Title>DumbTick</Title>
                 </Body>
                 <Right>
-                    <Button onPress={this.handleLogin} transparent>
+                    {/* <Button onPress={this.handleLogin} transparent>
                         <Icon name='person' />
-                    </Button>
+                    </Button> */}
                 </Right>
             </Header>
         );

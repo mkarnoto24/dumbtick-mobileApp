@@ -19,7 +19,7 @@ const AppNavigator = createStackNavigator({
   CategoryPage: {
     screen: CategoryPage,
     navigationOptions: {
-      title: 'Event by Category',
+      title: 'Event By Category',
       headerTintColor: 'red'
     }
   },

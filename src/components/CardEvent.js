@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Card, CardItem, Text, Button, View, Icon, Left, Body, Right } from 'native-base';
-
-
-
+import { Card, CardItem, Text, Button, View, Left, Body, Right } from 'native-base';
 
 export default class CardEvent extends Component {
     render() {
@@ -12,14 +9,14 @@ export default class CardEvent extends Component {
                 <Card >
 
                     <CardItem cardBody>
-                        <Image source={{ uri:`${this.props.image}` }} style={{ height: 200, width: null, flex: 1 }} />
+                        <Image source={{ uri: `${this.props.image}` }} style={{ height: 200, width: null, flex: 1 }} />
                         <Button transparent style={styles.btnprice} bordered>
 
                         </Button>
                     </CardItem>
                     <CardItem>
-                            <Text style={styles.titleevent}>
-                                {this.props.title}</Text>
+                        <Text style={styles.titleevent}>
+                            {this.props.title}</Text>
                         {/* <Right>
                             <Button transparent>
                                 <Icon name="bookmark" />
@@ -55,9 +52,6 @@ const styles = {
     },
     btnprice: {
         position: 'absolute',
-        // flex: 1,
-        // flexDirection: 'row-reverse',
-        // lineHeight: 125s
     },
     cardView: {
         margin: 10

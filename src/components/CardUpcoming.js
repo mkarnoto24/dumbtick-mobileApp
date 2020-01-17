@@ -1,53 +1,58 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
-import { Card, CardItem, Text, Button, View, FlatList } from 'native-base';
+import { Image, TouchableOpacity } from 'react-native';
+import { Card, CardItem, Text, Button, View, FlatList, Left, Body, Right } from 'native-base';
 import { withNavigation } from 'react-navigation';
+import moment from 'moment';
 
 
 
 class CardUpcoming extends Component {
-    // handlePress = () => {
-    //     this.props.navigation.navigate('EventDetail')
-    // }
+
+
+    handlePress = (value) => () => {
+        this.props.navigation.navigate('EventDetail', { id: value })
+        // alert(value);
+    }
     render() {
         return (
-            <View style={styles.container}>
-                {/* <Card >
+            <View>
+                <TouchableOpacity onPress={this.handlePress(this.props.id)}>
+                    <Card>
+                        <View style={{ flex: 1, flexDirection: 'row', marginBottom: 5 }}>
 
-                    <CardItem cardBody>
-                        <Image source={{ uri: `${this.props.image}` }} style={{ height: 200, width: null, flex: 1 }} />
-                        
-                    </CardItem>
-                    <CardItem>
-                        <Text onPress={this.handlePress} >
-        {this.props.title}</Text>
+                            <Image style={{ width: 100, height: 100, margin: 5 }} source={{ uri: this.props.img }} />
+                            <View style={{ flex: 1 }}>
+                                <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 5, marginRight: 3 }}>
+                                    {this.props.title.length <= 25 ? this.props.title : this.props.title.substr(0, 30) + '...'}
+                                </Text>
+                                <Text style={{ fontSize: 13, marginLeft: 5 }}>
+                                    {moment(`${this.props.start_time}`).format('MMM Do, YYYY')}
+                                </Text>
+                                <Text style={{ fontSize: 13, marginLeft: 5, marginRight: 5 }}>
+                                    {this.props.description.substr(0, 40) + '...'}
+                                </Text>
+                                <View style={{ flex: 1, flexDirection: 'row' }}>
+                                    <Left>
+                                        <Text style={{ marginLeft: 5, marginBottom: 2, fontSize: 13 }}>
+                                            Rp. {this.props.price}
+                                        </Text>
+                                    </Left>
+                                    <Body>
+                                    </Body>
+                                    {/* <Right>
+                                        <View>
+                                            <Text style={{ fontSize: 13 }}>See Detail</Text>
+                                        </View>
+                                    </Right> */}
 
-
-                    </CardItem>
-                    <CardItem>
-                        <Text style={styles.titleevent} onPress={this.handlePress}>
-                            See Detail
-                             </Text>
-                    </CardItem>
-
-                </Card> */}
-                <FlatList
-                    data={[{ key: '1' }, { key: '2' }]}
-                    renderItem={({ item }) => <Text > {item.key} </Text>}
-                    keyExtractor={item => item.id}
-                />
+                                </View>
+                            </View>
+                        </View>
+                    </Card>
+                </TouchableOpacity>
             </View >
         );
     }
 }
 
 export default withNavigation(CardUpcoming)
-
-const styles = {
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f5fcff'
-    }
-}

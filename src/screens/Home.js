@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Container, Content, InputGroup, Input, Icon, Button, Right, Left, Body, TouchableOpacity } from 'native-base';
-import { View, Text, ScrollView, FlatList, Image } from 'react-native';
+import { Container, Card, Content, InputGroup, Input, Icon, Button, Right, Left, Body } from 'native-base';
+import { View, Text, ScrollView, FlatList, Image, TouchableOpacity } from 'react-native';
 import Navbar from '../components/Navbar';
 import CardEvent from '../components/CardEvent';
 import CardUpcoming from '../components/CardUpcoming';
 import ButtonCategory from '../components/ButtonCategory';
 import { withNavigation } from 'react-navigation';
 import axios from 'axios';
-import moment from 'moment';
+
 
 class Home extends Component {
     constructor() {
@@ -39,48 +39,18 @@ class Home extends Component {
 
     renderItem = ({ item }) => {
         return (
-            <View style={{ flex: 1, flexDirection: 'row', marginBottom: 5 }}>
-                <Image style={{ width: 100, height: 100, margin: 5 }} source={{ uri: item.img }} />
-                <View style={{ flex: 1 }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 5, marginRight: 3 }}>
-                        {item.title.length <= 25 ? item.title : item.title.substr(0, 30) + '...'}
-                    </Text>
-                    <Text style={{ fontSize: 13, marginLeft: 5 }}>
-                        {moment(`${item.start_time}`).format('MMM Do, YYYY')}
-                    </Text>
-                    <Text style={{ fontSize: 13, marginLeft: 5, marginRight: 5 }}>
-                        {item.description.substr(0, 40) + '...'}
-                    </Text>
-                    <View style={{ flex: 1, flexDirection: 'row' }}>
-                        <Left>
-                            <Text style={{ marginLeft: 5, marginBottom: 2 }}>
-                                Rp. {item.price}
-                            </Text>
-                        </Left>
-                        <Body>
-                        </Body>
-                        <Right>
-                            <Text>See Detail</Text>
-                        </Right>
-
-                    </View>
-                </View>
-            </View>
+            <CardUpcoming
+                id={item.id}
+                img={item.img}
+                price={item.price}
+                title={item.title}
+                start_time={item.start_time}
+                description={item.description}
+            />
         )
 
     }
 
-    // FlatListItemSeparator = () => {
-    //     return (
-    //         <View
-    //             style={{
-    //                 height: 1,
-    //                 width: "100%",
-    //                 backgroundColor: "#000",
-    //             }}
-    //         />
-    //     );
-    // }
     render() {
         const list = this.state.list
         const events = this.state.events
@@ -122,7 +92,7 @@ class Home extends Component {
                     <View>
                         <Text style={styles.categorytitle}>
                             Today
-                            </Text>
+                        </Text>
                     </View>
                     <ScrollView horizontal>
                         {
@@ -138,27 +108,13 @@ class Home extends Component {
 
                     </ScrollView>
                     <Text style={styles.categorytitle}>
-                        Upcoming Event
+                        All Event
                         </Text>
-                    {/* <ScrollView horizontal style={styles.cardUpcomming}>
-                        {
-                            upcomingEvents.map((item,i)=>
-                            <CardUpcoming 
-                            key={i}
-                            image={item.img}
-                            title={item.title}
-                            price={item.price}
-                            />
-                            )
-                        }
-                       
-                    </ScrollView> */}
                     <View style={styles.flatlistWrapper}>
                         <FlatList
                             data={this.state.events}
                             renderItem={this.renderItem}
                             keyExtractor={item => item.id}
-                        // ItemSeparatorComponent={this.FlatListItemSeparator}
                         />
                     </View>
                 </Content>

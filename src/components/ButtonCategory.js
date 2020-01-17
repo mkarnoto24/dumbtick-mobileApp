@@ -4,13 +4,14 @@ import { View, Button, Text } from 'native-base';
 import { withNavigation } from 'react-navigation';
 
 class ButtonCategory extends Component {
-    handlePress = () => () => {
-        this.props.navigation.navigate('CategoryPage')
+    handlePress = (value) => () => {
+        this.props.navigation.navigate('CategoryPage', { id: value })
     }
     render() {
         return (
             <View>
-                <Button onPress={this.handlePress(`${this.props.idCategory}`)} rounded style={styles.btncategory}>
+                <Button onPress={this.handlePress(this.props.idCategory)}
+                    rounded style={styles.btncategory}>
                     <Text>{this.props.name}</Text>
                 </Button>
             </View>
